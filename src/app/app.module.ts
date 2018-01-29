@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from "@angular/forms";
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule, InMemoryWebApiModule, HttpInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppRoutingModule } from './/app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -28,7 +28,7 @@ import { MessageService } from './message.service';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false})    
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false})    
   ],
   providers: [
     HeroService,
